@@ -32,10 +32,12 @@ public class Hrac {
     public void pouziPredmet(String predmet){
         if (this.inventar.containsKey(predmet)){
             Predmet pouzityPretmet = this.inventar.get(predmet);
-            pouzityPretmet.pouziPredmet();
+            System.out.format("%s sa neda pouzit%n", predmet);
         }
         else
             System.out.println("Predmet neni v inventari");
+
+
     }
 
     public void polozPredmet(String predmet) {

@@ -135,6 +135,11 @@ public class VykonavacPrikazov {
         hrac.zoberPredmet(predmet);
     }
 
+    /**
+     * Vykona pokus o pouzitie predmetu
+     * @param prikaz
+     * @param hrac
+     */
     void pouziPredmet(Prikaz prikaz, Hrac hrac){
         if (!prikaz.maParameter()) {
             // ak prikaz nema parameter - druhe slovo - nevedno co zobrat

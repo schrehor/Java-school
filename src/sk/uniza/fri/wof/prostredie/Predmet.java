@@ -10,8 +10,4 @@ public class Predmet {
     public String getNazov() {
         return this.nazov;
     }
-
-    public void pouziPredmet(){
-        System.out.println("Predmet sa neda pouzit");
-    }
 }
