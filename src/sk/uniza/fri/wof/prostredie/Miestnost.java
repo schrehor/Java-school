@@ -46,6 +46,7 @@ public class Miestnost {
 
     /**
      * zoberie predmet z miestnosti
+     *
      * @param nazov nazov zdvihaneho predmetu
      * @return zdvihnuty predmet
      */

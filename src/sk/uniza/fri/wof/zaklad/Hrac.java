@@ -1,6 +1,7 @@
 package sk.uniza.fri.wof.zaklad;
 
 import sk.uniza.fri.wof.prostredie.Miestnost;
+import sk.uniza.fri.wof.prostredie.ObycajnyPredmet;
 import sk.uniza.fri.wof.prostredie.Predmet;
 
 import java.util.HashMap;
@@ -40,8 +41,14 @@ public class Hrac {
     }
 
     public void polozPredmet(String predmet) {
-        Predmet pokladanyPredmet = this.inventar.remove(predmet);
-        this.aktualnaMiestnost.polozPredmet(pokladanyPredmet);
+        Predmet pokladanyPredmet = this.inventar.get(predmet);
+        if (pokladanyPredmet.polozPredmet()) {
+            pokladanyPredmet = this.inventar.remove(predmet);
+            this.aktualnaMiestnost.polozPredmet(pokladanyPredmet);
+        }
+        else
+            System.out.println("Predmet sa neda polozit");
+
     }
 
     /**
