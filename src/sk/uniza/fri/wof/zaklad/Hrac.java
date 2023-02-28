@@ -3,8 +3,6 @@ package sk.uniza.fri.wof.zaklad;
 import sk.uniza.fri.wof.prostredie.Miestnost;
 import sk.uniza.fri.wof.prostredie.Predmet;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 
 public class Hrac {
@@ -31,26 +29,10 @@ public class Hrac {
         this.inventar.put(zdvihnutyPredmet.getNazov(), zdvihnutyPredmet);
     }
 
-    public void pouziPredmet(String predmet){
-        if (this.inventar.containsKey(predmet)){
-            switch (predmet) {
-                case "hodinky" -> {
-                    String timeStamp = new SimpleDateFormat("HH:mm:ss").format(new Date());
-                    System.out.printf("Aktualny cas je %s%n", timeStamp);
-                }
-                case "navleky" -> {
-                    if (!this.inventar.get(predmet).getPouzite()) {
-                        System.out.println("Navlecene");
-                        this.inventar.get(predmet).setPouzite(true);
-                    } else {
-                        System.out.println("Vyvlecene");
-                        this.inventar.get(predmet).setPouzite(false);
-                    }
-                }
-                default -> {
-                    System.out.format("%s sa neda pouzit%n", predmet);
-                }
-            }
+    public void pouziPredmet(String nazovPredmet){
+        var predmet = this.inventar.get(nazovPredmet);
+        if (predmet != null){
+            predmet.pouzi();
         }
         else {
             System.out.println("Predmet neni v inventari");
