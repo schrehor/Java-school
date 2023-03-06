@@ -1,6 +1,6 @@
 package sk.uniza.fri.wof3.zaklad;
 
-import sk.uniza.fri.wof2.prostredie.Miestnost;
+import sk.uniza.fri.wof3.prostredie.Miestnost;
 import sk.uniza.fri.wof3.prostredie.predmety.Predmet;
 
 import java.util.HashMap;

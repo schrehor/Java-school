@@ -1,11 +1,10 @@
 package sk.uniza.fri.wof3.zaklad;
 
-import sk.uniza.fri.wof2.prikazy.Parser;
-import sk.uniza.fri.wof2.prikazy.Prikaz;
-import sk.uniza.fri.wof2.prikazy.VykonavacPrikazov;
-import sk.uniza.fri.wof2.prostredie.HernySvet;
-import sk.uniza.fri.wof2.prostredie.Miestnost;
-import sk.uniza.fri.wof2.zaklad.Hrac;
+import sk.uniza.fri.wof3.prikazy.Parser;
+import sk.uniza.fri.wof3.prikazy.Prikaz;
+import sk.uniza.fri.wof3.prikazy.VykonavacPrikazov;
+import sk.uniza.fri.wof3.prostredie.HernySvet;
+import sk.uniza.fri.wof3.prostredie.Miestnost;
 
 /**
  * Trieda sk.uniza.fri.wof.zaklad.Hra je hlavna trieda aplikacie "World of FRI".
@@ -27,7 +26,7 @@ import sk.uniza.fri.wof2.zaklad.Hrac;
 public class Hra  {
     private final VykonavacPrikazov vykonavacPrikazov;
     private final Parser parser;
-    private final sk.uniza.fri.wof2.zaklad.Hrac hrac;
+    private final Hrac hrac;
     private final HernySvet hernySvet;
 
     /**

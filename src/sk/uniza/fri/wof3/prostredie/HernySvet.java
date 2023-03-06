@@ -1,23 +1,19 @@
 package sk.uniza.fri.wof3.prostredie;
 
-import sk.uniza.fri.wof2.prostredie.Hodinky;
-import sk.uniza.fri.wof2.prostredie.Miestnost;
-import sk.uniza.fri.wof2.prostredie.Navleky;
-import sk.uniza.fri.wof2.prostredie.ObycajnyPredmet;
-import sk.uniza.fri.wof2.prostredie.predmety.Hodinky;
-import sk.uniza.fri.wof2.prostredie.predmety.Navleky;
-import sk.uniza.fri.wof2.prostredie.predmety.ObycajnyPredmet;
-import sk.uniza.fri.wof2.prostredie.vychody.VstupDoLabaku;
+import sk.uniza.fri.wof3.prostredie.predmety.Hodinky;
+import sk.uniza.fri.wof3.prostredie.predmety.Navleky;
+import sk.uniza.fri.wof3.prostredie.predmety.ObycajnyPredmet;
+import sk.uniza.fri.wof3.prostredie.vychody.VstupDoLabaku;
 
 public class HernySvet {
-    private final sk.uniza.fri.wof2.prostredie.Miestnost startovaciaMiestnost;
+    private final Miestnost startovaciaMiestnost;
 
     public HernySvet() {
-        sk.uniza.fri.wof2.prostredie.Miestnost terasa = new sk.uniza.fri.wof2.prostredie.Miestnost("terasa - hlavny vstup na fakultu");
-        sk.uniza.fri.wof2.prostredie.Miestnost aula = new sk.uniza.fri.wof2.prostredie.Miestnost("aula");
-        sk.uniza.fri.wof2.prostredie.Miestnost bufet = new sk.uniza.fri.wof2.prostredie.Miestnost("bufet");
-        sk.uniza.fri.wof2.prostredie.Miestnost labak = new sk.uniza.fri.wof2.prostredie.Miestnost("pocitacove laboratorium");
-        sk.uniza.fri.wof2.prostredie.Miestnost kancelaria = new sk.uniza.fri.wof2.prostredie.Miestnost("kancelaria spravcu pocitacoveho laboratoria");
+        Miestnost terasa = new Miestnost("terasa - hlavny vstup na fakultu");
+        Miestnost aula = new Miestnost("aula");
+        Miestnost bufet = new Miestnost("bufet");
+        Miestnost labak = new Miestnost("pocitacove laboratorium");
+        Miestnost kancelaria = new Miestnost("kancelaria spravcu pocitacoveho laboratoria");
 
         // inicializacia miestnosti = nastavenie vychodov
         terasa.nastavVychod("vychod", aula);

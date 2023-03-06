@@ -1,9 +1,8 @@
 package sk.uniza.fri.wof3.prostredie;
 
-import sk.uniza.fri.wof2.prostredie.Predmet;
-import sk.uniza.fri.wof2.prostredie.predmety.Predmet;
-import sk.uniza.fri.wof2.prostredie.vychody.ObycanyVychod;
-import sk.uniza.fri.wof2.prostredie.vychody.Vychod;
+import sk.uniza.fri.wof3.prostredie.predmety.Predmet;
+import sk.uniza.fri.wof3.prostredie.vychody.ObycanyVychod;
+import sk.uniza.fri.wof3.prostredie.vychody.Vychod;
 
 import java.util.HashMap;
 import java.util.Optional;

@@ -1,7 +1,7 @@
 package sk.uniza.fri.wof3.prostredie.vychody;
 
-import sk.uniza.fri.wof2.prostredie.Miestnost;
-import sk.uniza.fri.wof2.zaklad.Hrac;
+import sk.uniza.fri.wof3.prostredie.Miestnost;
+import sk.uniza.fri.wof3.zaklad.Hrac;
 
 public class VstupDoLabaku implements Vychod {
     private final Miestnost miestnost;

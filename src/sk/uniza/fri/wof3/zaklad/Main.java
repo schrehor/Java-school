@@ -1,7 +1,5 @@
 package sk.uniza.fri.wof3.zaklad;
 
-import sk.uniza.fri.wof2.zaklad.Hra;
-
 /**
  * Hlavna trieda hry WoF s metodou main - spustanie v NB
  *
@@ -14,7 +12,7 @@ public class Main {
      * @param args parametre programu
      */
     public static void main(String[] args) {
-        sk.uniza.fri.wof2.zaklad.Hra hra = new Hra();
+        Hra hra = new Hra();
         hra.hraj();
     }
 }

@@ -1,7 +1,6 @@
 package sk.uniza.fri.wof3.prikazy;
 
-import sk.uniza.fri.wof2.prikazy.Prikaz;
-import sk.uniza.fri.wof2.zaklad.Hrac;
+import sk.uniza.fri.wof3.zaklad.Hrac;
 
 /**
  * Trieda NazvyPrikazov udrzuje zoznam nazvov platnych prikazov hry. 
@@ -42,7 +41,7 @@ public class VykonavacPrikazov {
      * @param hrac   hrac, ktory vykonava prikaz
      * @return true ak prikaz ukonci hru, inak vrati false.
      */
-    public boolean vykonajPrikaz(sk.uniza.fri.wof2.prikazy.Prikaz prikaz, Hrac hrac) {
+    public boolean vykonajPrikaz(Prikaz prikaz, Hrac hrac) {
         if (prikaz.jeNeznamy()) {
             System.out.println("Nerozumiem, co mas na mysli...");
             return false;
@@ -84,7 +83,7 @@ public class VykonavacPrikazov {
      * @param prikaz
      * @return true, ak prikaz konci hru, inak false.
      */
-    boolean ukonciHru(sk.uniza.fri.wof2.prikazy.Prikaz prikaz) {
+    boolean ukonciHru(Prikaz prikaz) {
         if (prikaz.maParameter()) {
             System.out.println("Ukonci, co?");
             return false;
@@ -99,7 +98,7 @@ public class VykonavacPrikazov {
      * @param prikaz
      * @param hrac
      */
-    void polozPredmet(sk.uniza.fri.wof2.prikazy.Prikaz prikaz, Hrac hrac) {
+    void polozPredmet(Prikaz prikaz, Hrac hrac) {
         if (!prikaz.maParameter()) {
             // ak prikaz nema parameter - druhe slovo - nevedno co polozit
             System.out.println("Poloz co?");
@@ -116,7 +115,7 @@ public class VykonavacPrikazov {
      * @param prikaz
      * @param hrac
      */
-    void zoberPredmet(sk.uniza.fri.wof2.prikazy.Prikaz prikaz, Hrac hrac) {
+    void zoberPredmet(Prikaz prikaz, Hrac hrac) {
         if (!prikaz.maParameter()) {
             // ak prikaz nema parameter - druhe slovo - nevedno co zobrat
             System.out.println("Zober co?");
@@ -127,7 +126,7 @@ public class VykonavacPrikazov {
         hrac.zoberPredmet(predmet);
     }
 
-    private void pouziPredmet(sk.uniza.fri.wof2.prikazy.Prikaz prikaz, Hrac hrac) {
+    private void pouziPredmet(Prikaz prikaz, Hrac hrac) {
         if (!prikaz.maParameter()) {
             // ak prikaz nema parameter - druhe slovo - nevedno co zobrat
             System.out.println("Pouzi co?");
