@@ -1,8 +1,5 @@
 package sk.uniza.fri.wof3.prikazy;
 
-import sk.uniza.fri.wof2.prikazy.Prikaz;
-import sk.uniza.fri.wof2.prikazy.VykonavacPrikazov;
-
 import java.util.Scanner;
 
 /**
@@ -17,7 +14,7 @@ import java.util.Scanner;
  * @version 2012.02.21
  */
 public class Parser {
-    private final sk.uniza.fri.wof2.prikazy.VykonavacPrikazov vykonavacPrikazov;
+    private final VykonavacPrikazov vykonavacPrikazov;
     private final Scanner citac;         // zdroj vstupov od hraca
 
     /**
@@ -31,7 +28,7 @@ public class Parser {
     /**
      * @return prikaz zadany hracom
      */
-    public sk.uniza.fri.wof2.prikazy.Prikaz nacitajPrikaz() {
+    public Prikaz nacitajPrikaz() {
         System.out.print("> ");     // vyzva pre hraca na zadanie prikazu
 
         String vstupnyRiadok = this.citac.nextLine();
@@ -52,10 +49,10 @@ public class Parser {
         // kontrola platnosti prikazu
         if (this.vykonavacPrikazov.jePrikaz(prikaz)) {
             // vytvori platny prikaz
-            return new sk.uniza.fri.wof2.prikazy.Prikaz(prikaz, parameter);
+            return new Prikaz(prikaz, parameter);
         } else {
             // vytvori neplatny - "neznamy" prikaz
-            return new Prikaz(null, parameter);
+            return new Prikaz(null, parameter); 
         }
     }
 }
