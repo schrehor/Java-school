@@ -1,4 +1,4 @@
-package sk.uniza.fri.wof.prostredie;
+package sk.uniza.fri.wof2.prostredie;
 
 import java.util.HashMap;
 

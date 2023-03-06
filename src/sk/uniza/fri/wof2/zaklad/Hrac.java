@@ -1,8 +1,7 @@
-package sk.uniza.fri.wof.zaklad;
+package sk.uniza.fri.wof2.zaklad;
 
-import sk.uniza.fri.wof.prostredie.Miestnost;
-import sk.uniza.fri.wof.prostredie.ObycajnyPredmet;
-import sk.uniza.fri.wof.prostredie.Predmet;
+import sk.uniza.fri.wof2.prostredie.Miestnost;
+import sk.uniza.fri.wof2.prostredie.Predmet;
 
 import java.util.HashMap;
 
@@ -30,12 +29,11 @@ public class Hrac {
         this.inventar.put(zdvihnutyPredmet.getNazov(), zdvihnutyPredmet);
     }
 
-    public void pouziPredmet(String nazovPredmet){
+    public void pouziPredmet(String nazovPredmet) {
         var predmet = this.inventar.get(nazovPredmet);
-        if (predmet != null){
+        if (predmet != null) {
             predmet.pouzi();
-        }
-        else {
+        } else {
             System.out.println("Predmet neni v inventari");
         }
     }
@@ -45,9 +43,9 @@ public class Hrac {
         if (pokladanyPredmet.polozPredmet()) {
             pokladanyPredmet = this.inventar.remove(predmet);
             this.aktualnaMiestnost.polozPredmet(pokladanyPredmet);
-        }
-        else
+        } else {
             System.out.println("Predmet sa neda polozit");
+        }
 
     }
 

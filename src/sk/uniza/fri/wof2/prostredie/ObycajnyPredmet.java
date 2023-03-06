@@ -1,4 +1,4 @@
-package sk.uniza.fri.wof.prostredie;
+package sk.uniza.fri.wof2.prostredie;
 
 public class ObycajnyPredmet implements Predmet {
     private final String nazov;

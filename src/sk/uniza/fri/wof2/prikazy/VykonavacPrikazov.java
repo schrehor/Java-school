@@ -1,6 +1,6 @@
-package sk.uniza.fri.wof.prikazy;
+package sk.uniza.fri.wof2.prikazy;
 
-import sk.uniza.fri.wof.zaklad.Hrac;
+import sk.uniza.fri.wof2.zaklad.Hrac;
 
 /**
  * Trieda NazvyPrikazov udrzuje zoznam nazvov platnych prikazov hry. 
@@ -140,7 +140,7 @@ public class VykonavacPrikazov {
      * @param prikaz
      * @param hrac
      */
-    void pouziPredmet(Prikaz prikaz, Hrac hrac){
+    void pouziPredmet(Prikaz prikaz, Hrac hrac) {
         if (!prikaz.maParameter()) {
             // ak prikaz nema parameter - druhe slovo - nevedno co zobrat
             System.out.println("Pouzi co?");

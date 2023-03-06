@@ -1,4 +1,4 @@
-package sk.uniza.fri.wof.prikazy;
+package sk.uniza.fri.wof2.prikazy;
 
 /**
  * Trieda prikaz implemntuje casti prikazu, ktore moze hrac zadat.

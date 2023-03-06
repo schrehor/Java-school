@@ -1,4 +1,4 @@
-package sk.uniza.fri.wof.zaklad;
+package sk.uniza.fri.wof2.zaklad;
 
 /**
  * Hlavna trieda hry WoF s metodou main - spustanie v NB

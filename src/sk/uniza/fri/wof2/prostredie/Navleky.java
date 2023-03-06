@@ -1,6 +1,6 @@
-package sk.uniza.fri.wof.prostredie;
+package sk.uniza.fri.wof2.prostredie;
 
-public class Navleky implements Predmet{
+public class Navleky implements Predmet {
     private boolean pouzite = false;
 
     @Override
