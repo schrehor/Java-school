@@ -1,8 +1,6 @@
 package sk.uniza.fri.wof3.prostredie;
 
-import sk.uniza.fri.wof3.prostredie.predmety.Hodinky;
-import sk.uniza.fri.wof3.prostredie.predmety.Navleky;
-import sk.uniza.fri.wof3.prostredie.predmety.ObycajnyPredmet;
+import sk.uniza.fri.wof3.prostredie.predmety.*;
 import sk.uniza.fri.wof3.prostredie.vychody.VstupDoLabaku;
 
 public class HernySvet {
@@ -28,6 +26,8 @@ public class HernySvet {
         terasa.polozPredmet(new ObycajnyPredmet("kamen"));
         terasa.polozPredmet(new Hodinky());
         terasa.polozPredmet(new Navleky());
+        terasa.polozPredmet(new Radio());
+        terasa.polozPredmet(new Baterka());
         labak.polozPredmet(new ObycajnyPredmet("mys"));
         bufet.polozPredmet(new ObycajnyPredmet("bageta"));
 

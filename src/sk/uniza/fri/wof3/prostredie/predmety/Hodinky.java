@@ -1,5 +1,7 @@
 package sk.uniza.fri.wof3.prostredie.predmety;
 
+import sk.uniza.fri.wof3.zaklad.Hrac;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -10,7 +12,7 @@ public class Hodinky implements Predmet {
     }
 
     @Override
-    public void pouzi() {
+    public void pouzi(Hrac hrac) {
         var dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
         var now = LocalDateTime.now();
         System.out.println(dtf.format(now));

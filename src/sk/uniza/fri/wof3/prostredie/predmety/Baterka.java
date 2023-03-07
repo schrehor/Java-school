@@ -2,21 +2,23 @@ package sk.uniza.fri.wof3.prostredie.predmety;
 
 import sk.uniza.fri.wof3.zaklad.Hrac;
 
-public class ObycajnyPredmet implements Predmet {
-    private final String nazov;
-
-    public ObycajnyPredmet(String nazov) {
-        this.nazov = nazov;
-    }
+public class Baterka implements Predmet {
 
     @Override
     public String getNazov() {
-        return this.nazov;
+        return "baterka";
     }
 
     @Override
     public void pouzi(Hrac hrac) {
-        System.out.printf("Predmet %s sa použiť nedá%n", this.nazov);
+        var radio = hrac.najdiPredmet("radio");
+        if (radio.isPresent()) {
+            ((Radio)radio.get()).vlozBaterky();
+            hrac.vyberPredmetZInventara(this.getNazov());
+        } else {
+            System.out.println("Nemas Radio ty tupec");
+        }
+
     }
 
     @Override

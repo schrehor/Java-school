@@ -1,5 +1,7 @@
 package sk.uniza.fri.wof3.prostredie.predmety;
 
+import sk.uniza.fri.wof3.zaklad.Hrac;
+
 public class Navleky implements Predmet {
     private boolean suObute;
 
@@ -12,13 +14,13 @@ public class Navleky implements Predmet {
         return "navleky";
     }
 
+    @SuppressWarnings("checkstyle:RightCurly")
     @Override
-    public void pouzi() {
+    public void pouzi(Hrac hrac) {
         if (this.suObute) {
             this.suObute = false;
             System.out.println("Prave si si vyzul návleky");
-        }
-        else {
+        } else {
             this.suObute = true;
             System.out.println("Práve si si obul návleky");
         }

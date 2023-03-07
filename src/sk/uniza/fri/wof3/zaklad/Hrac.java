@@ -32,8 +32,7 @@ public class Hrac {
         var zdvihnutyPredmet = this.aktualnaMiestnost.zoberPredmet(predmet);
         if (zdvihnutyPredmet.isPresent()) {
             this.inventar.put(zdvihnutyPredmet.get().getNazov(), zdvihnutyPredmet.get());
-        }
-        else {
+        } else {
             System.out.println("Tento predmet sa v miestnosti nenachádza.");
         }
     }
@@ -42,8 +41,7 @@ public class Hrac {
         Predmet pokladanyPredmet = this.inventar.remove(predmet);
         if (pokladanyPredmet == null) {
             System.out.println("Tento predmet v inventári nemáš");
-        }
-        else if (!pokladanyPredmet.mozemPolozit()) {
+        } else if (!pokladanyPredmet.mozemPolozit()) {
             this.inventar.put(pokladanyPredmet.getNazov(), pokladanyPredmet);
             System.out.printf("Predmet %s sa nedá položiť%n", pokladanyPredmet.getNazov());
             return;
@@ -76,10 +74,14 @@ public class Hrac {
             System.out.println("Tento predmet nemáš");
             return;
         }
-        predmet.pouzi();
+        predmet.pouzi(this);
     }
 
     public Miestnost getAktualnaMiestnost() {
         return this.aktualnaMiestnost;
+    }
+
+    public Predmet vyberPredmetZInventara(String nazov) {
+        return this.inventar.remove(nazov);
     }
 }
