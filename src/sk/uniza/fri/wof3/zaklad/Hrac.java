@@ -2,6 +2,8 @@ package sk.uniza.fri.wof3.zaklad;
 
 import sk.uniza.fri.wof3.prostredie.Miestnost;
 import sk.uniza.fri.wof3.prostredie.predmety.Predmet;
+import sk.uniza.fri.wof3.prostredie.predmety.Radio;
+import sk.uniza.fri.wof3.prostredie.predmety.RobPriPosune;
 
 import java.util.HashMap;
 import java.util.Optional;
@@ -16,7 +18,11 @@ public class Hrac {
     }
 
     public void posunVSmere(String smer) {
-
+        for (Predmet predmet : this.inventar.values()) {
+            if (predmet instanceof RobPriPosune predmetSPosune) {
+                predmetSPosune.rob();
+            }
+        }
         var vychod = this.aktualnaMiestnost.getVychodVSmere(smer);
         if (vychod.isEmpty()) {
             System.out.println("Tam nie je vychod!");

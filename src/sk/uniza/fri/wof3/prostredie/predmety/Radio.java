@@ -2,7 +2,7 @@ package sk.uniza.fri.wof3.prostredie.predmety;
 
 import sk.uniza.fri.wof3.zaklad.Hrac;
 
-public class Radio implements Predmet {
+public class Radio implements Predmet, RobPriPosune {
 
     private boolean maBaterky;
 
@@ -13,11 +13,11 @@ public class Radio implements Predmet {
 
     @Override
     public void pouzi(Hrac hrac) {
-        if (this.maBaterky) {
-            System.out.println("Hram jak o dusu");
-        } else {
-            System.out.println("Bez baterky ti bude vyhravat maximalne tak v gebuli");
-        }
+//        if (this.maBaterky) {
+//            System.out.println("Hram jak o dusu");
+//        } else {
+//            System.out.println("Bez baterky ti bude vyhravat maximalne tak v gebuli");
+//        }
     }
 
     @Override
@@ -32,5 +32,11 @@ public class Radio implements Predmet {
 
     public void vlozBaterky() {
         this.maBaterky = true;
+    }
+
+    public void rob() {
+        if (this.maBaterky) {
+            System.out.println("Hram jak o dusu");
+        }
     }
 }
