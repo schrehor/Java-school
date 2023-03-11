@@ -12,15 +12,6 @@ public class Radio implements Predmet, RobPriPosune {
     }
 
     @Override
-    public void pouzi(Hrac hrac) {
-//        if (this.maBaterky) {
-//            System.out.println("Hram jak o dusu");
-//        } else {
-//            System.out.println("Bez baterky ti bude vyhravat maximalne tak v gebuli");
-//        }
-    }
-
-    @Override
     public boolean mozemPolozit() {
         return false;
     }

@@ -1,8 +1,9 @@
 package sk.uniza.fri.wof3.prostredie.predmety;
 
+import sk.uniza.fri.wof3.prostredie.Pouzitelny;
 import sk.uniza.fri.wof3.zaklad.Hrac;
 
-public class Baterka implements Predmet {
+public class Baterka implements Predmet, Pouzitelny {
 
     @Override
     public String getNazov() {

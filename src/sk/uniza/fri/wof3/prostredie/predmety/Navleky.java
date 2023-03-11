@@ -14,8 +14,6 @@ public class Navleky implements Predmet {
         return "navleky";
     }
 
-    @SuppressWarnings("checkstyle:RightCurly")
-    @Override
     public void pouzi(Hrac hrac) {
         if (this.suObute) {
             this.suObute = false;

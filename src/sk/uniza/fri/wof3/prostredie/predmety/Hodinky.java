@@ -1,11 +1,12 @@
 package sk.uniza.fri.wof3.prostredie.predmety;
 
+import sk.uniza.fri.wof3.prostredie.Pouzitelny;
 import sk.uniza.fri.wof3.zaklad.Hrac;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Hodinky implements Predmet {
+public class Hodinky implements Predmet, Pouzitelny {
     @Override
     public String getNazov() {
         return "hodinky";
